@@ -1,5 +1,15 @@
 <p align="center">
-  <img alt="Blockify Logo" src="https://github.com/blockify-medical/Medical-Blockchain/blob/master/Pics/logo.png?raw=true">
+  <img alt="Blockify Logo" height="200" src="Pics/logo.png?raw=true">
+</p>
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.blockify.medical">
+  <img alt="Google play badge" height="100" src="Pics/google-play-badge.png?raw=true">
+  </a>
+</p>
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.blockify.medical">
+  <img alt="Google play QR" height="250" src="Pics/google play QR.png?raw=true">
+  </a>
 </p>
 
  ## Blockify is a Secure Medical Record Using BlockChain.
