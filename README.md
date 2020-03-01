@@ -37,7 +37,13 @@ Here we will list some of the problems.
 |[Node.js express](https://nodejs.org/) |  Web services development|
 |[Odoo](https://www.odoo.com/) | Web user interface development|
 
-## If you now ask why we use hyperledger fabric not ethereum we hope that this compare clear this point 
+## here are some videos explaining blockchain
+[![Blockchain 101 - A Visual Demo](http://img.youtube.com/vi/_160oMzblY8/0.jpg)](http://www.youtube.com/watch?v=_160oMzblY8 "Blockchain 101 - A Visual Demo")
+[![Blockchain 101 - A Visual Demo](http://img.youtube.com/vi/xIDL_akeras/0.jpg)](http://www.youtube.com/watch?v=xIDL_akeras "Blockchain 101 - A Visual Demo")
+
+
+
+## If you now ask why we use hyperledger fabric not ethereum we hope that this comparsion clear this point 
 ![Hyperledger vs Etherum](https://github.com/blockify-medical/Medical-Blockchain/blob/master/Pics/Hyperledger-vs-Etherum.png?raw=true) 
 
 ### Here we come to speak about our Project 
