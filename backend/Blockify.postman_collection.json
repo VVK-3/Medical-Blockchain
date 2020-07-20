@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "b292c275-7a3c-4a48-961c-7f54f8f5ac5c",
+		"name": "Blockify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Patient Apis",
+			"item": [
+				{
+					"name": "Register ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Eslam",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eslam.elhakmey3pat@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "national_id",
+									"value": "0123456789",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "0123456789",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "0123456789",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "dakados saad zaghloul st",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": " mit ghamr",
+									"type": "text"
+								},
+								{
+									"key": "zip_code",
+									"value": "35611",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01018211946",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Record (ACCEPTED or REJECTED)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjp7ImFkZHJlc3MiOiJkYWthZG9zIHNhYWQgemFnaGxvdWwgc3QiLCJjaXR5IjoiIG1pdCBnaGFtciIsInppcF9jb2RlIjoiMzU2MTEifSwiY3JlYXRlZF9hdCI6IjIwMTktMTAtMjlUMTU6NDA6MDIuNTM2WiIsImVtYWlsIjoiZXNsYW0uZWxoYWttZXkzcGF0QGdtYWlsLmNvbSIsImlkIjoiNWRiODVkNTJhOWY5ZTcyZjBmMzQ0MjU0IiwibmFtZSI6IkVzbGFtIiwibmF0aW9uYWxfaWQiOiIwMTIzNDU2Nzg5IiwicGhvbmUiOiIwMTAxODIxMTk0NiIsInR5cGUiOiJwYXRpZW50IiwidXBkYXRlZF9hdCI6IjIwMTktMTAtMjlUMTU6NDA6MDIuNTM2WiIsImlhdCI6MTU3MjM2MzY5NiwiZXhwIjoxNTcyMzY3Mjk2fQ.Bk93gdC0ziG5lxdqri95stW273WQ_PULs4WIRMid2UQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5db85d9ba9f9e72f0f344256",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "ACCEPTED",
+									"description": "Also can Be REJECTED",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/update-record",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"update-record"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Request (ACCEPTED or REJECTED)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjp7ImFkZHJlc3MiOiJkYWthZG9zIHNhYWQgemFnaGxvdWwgc3QiLCJjaXR5IjoiIG1pdCBnaGFtciIsInppcF9jb2RlIjoiMzU2MTEifSwiY3JlYXRlZF9hdCI6IjIwMTktMTAtMjlUMTU6NDA6MDIuNTM2WiIsImVtYWlsIjoiZXNsYW0uZWxoYWttZXkzcGF0QGdtYWlsLmNvbSIsImlkIjoiNWRiODVkNTJhOWY5ZTcyZjBmMzQ0MjU0IiwibmFtZSI6IkVzbGFtIiwibmF0aW9uYWxfaWQiOiIwMTIzNDU2Nzg5IiwicGhvbmUiOiIwMTAxODIxMTk0NiIsInR5cGUiOiJwYXRpZW50IiwidXBkYXRlZF9hdCI6IjIwMTktMTAtMjlUMTU6NDA6MDIuNTM2WiIsImlhdCI6MTU3MjM2MzY5NiwiZXhwIjoxNTcyMzY3Mjk2fQ.Bk93gdC0ziG5lxdqri95stW273WQ_PULs4WIRMid2UQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5db85f8e1d27872fdd1ab3a3",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "ACCEPTED",
+									"description": "Also can Be REJECTED",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/update-request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"update-request"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Doctor Apis",
+			"item": [
+				{
+					"name": "Register Independant Doctor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Eslam",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eslam.elhakmey3doc@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "national_id",
+									"value": "0123456789",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "0123456789",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "0123456789",
+									"description": "0",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "dakados saad zaghloul st",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": " mit ghamr",
+									"type": "text"
+								},
+								{
+									"key": "zip_code",
+									"value": "35611",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01018211946",
+									"type": "text"
+								},
+								{
+									"key": "represents",
+									"value": "doctor",
+									"type": "text"
+								},
+								{
+									"key": "institution_name",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "institution_number",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/register-doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"register-doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Institution Doctor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Eslam",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eslam.elhakmey3doc2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "national_id",
+									"value": "0123456789",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "0123456789",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "0123456789",
+									"description": "0",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "dakados saad zaghloul st",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": " mit ghamr",
+									"type": "text"
+								},
+								{
+									"key": "zip_code",
+									"value": "35611",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01018211946",
+									"type": "text"
+								},
+								{
+									"key": "represents",
+									"value": "inistitution",
+									"type": "text"
+								},
+								{
+									"key": "institution_name",
+									"value": "Mit Ghamr Hospital",
+									"type": "text"
+								},
+								{
+									"key": "institution_number",
+									"value": "154849564",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/register-doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"register-doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjp7ImFkZHJlc3MiOiJkYWthZG9zIHNhYWQgemFnaGxvdWwgc3QiLCJjaXR5IjoiIG1pdCBnaGFtciIsInppcF9jb2RlIjoiMzU2MTEifSwiY3JlYXRlZF9hdCI6IjIwMTktMTAtMjlUMTM6Mzg6NDIuNjcxWiIsImVtYWlsIjoiZXNsYW0uZWxoYWttZXkzZG9jQGdtYWlsLmNvbSIsImlkIjoiNWRiODQwZTI4ZjFjOWI1NGQ2YjYxMDJlIiwiaW5zdGl0dXRpb24iOnsibmFtZSI6Ik1pdCBHaGFtciBIb3NwaXRhbCIsIm51bWJlciI6IjE1NDg0OTU2NCJ9LCJuYW1lIjoiRXNsYW0iLCJuYXRpb25hbF9pZCI6IjAxMjM0NTY3ODkiLCJwaG9uZSI6IjAxMDE4MjExOTQ2IiwicmVwcmVzZW50cyI6ImluaXN0aXR1dGlvbiIsInR5cGUiOiJkb2N0b3IiLCJ1cGRhdGVkX2F0IjoiMjAxOS0xMC0yOVQxMzozODo0Mi42NzFaIiwiaWF0IjoxNTcyMzU2NTM2LCJleHAiOjE1NzIzNjAxMzZ9.3U2jKLhjH6jTddYhWNDRAnbRSzE48e_iI-FiW8OkhxA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "national_id",
+									"value": "0123456789",
+									"type": "text"
+								},
+								{
+									"key": "data[disease]",
+									"value": "x",
+									"type": "text"
+								},
+								{
+									"key": "data[cure]",
+									"value": "y",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/create-record",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"create-record"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZGRyZXNzIjp7ImFkZHJlc3MiOiJkYWthZG9zIHNhYWQgemFnaGxvdWwgc3QiLCJjaXR5IjoiIG1pdCBnaGFtciIsInppcF9jb2RlIjoiMzU2MTEifSwiY3JlYXRlZF9hdCI6IjIwMTktMTAtMjlUMTM6Mzg6NDIuNjcxWiIsImVtYWlsIjoiZXNsYW0uZWxoYWttZXkzZG9jQGdtYWlsLmNvbSIsImlkIjoiNWRiODQwZTI4ZjFjOWI1NGQ2YjYxMDJlIiwiaW5zdGl0dXRpb24iOnsibmFtZSI6Ik1pdCBHaGFtciBIb3NwaXRhbCIsIm51bWJlciI6IjE1NDg0OTU2NCJ9LCJuYW1lIjoiRXNsYW0iLCJuYXRpb25hbF9pZCI6IjAxMjM0NTY3ODkiLCJwaG9uZSI6IjAxMDE4MjExOTQ2IiwicmVwcmVzZW50cyI6ImluaXN0aXR1dGlvbiIsInR5cGUiOiJkb2N0b3IiLCJ1cGRhdGVkX2F0IjoiMjAxOS0xMC0yOVQxMzozODo0Mi42NzFaIiwiaWF0IjoxNTcyMzU2NTM2LCJleHAiOjE1NzIzNjAxMzZ9.3U2jKLhjH6jTddYhWNDRAnbRSzE48e_iI-FiW8OkhxA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "national_id",
+									"value": "0123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/create-request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"create-request"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "General Login Api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "eslam.elhakmey2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "0123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
